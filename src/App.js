@@ -55,7 +55,7 @@
        var button = pageNumbers.map(a => {
              return(
 
-             <button onClick={() =>this.handleClick(a)}>{a}</button>
+             <button className="btn btn-primary mr-1" onClick={() =>this.handleClick(a)}>{a}</button>
              )
        })
 
@@ -68,6 +68,9 @@
                   <th scope="row">{each.id}</th>
                   <td>{each.title}</td>
                   <td>{each.body}</td>
+                  <td> <button className="btn btn-success" >Edit</button></td>
+                  <td> <button className="btn btn-danger">Delete</button></td>
+                  
                   
                 </tr>
             </tbody>
@@ -83,12 +86,14 @@
                           <th scope="col">#</th>
                           <th scope="col">title</th>
                           <th scope="col">body</th>
+                          <th scope="col">Edit</th>
+                          <th scope="col">Delete</th>
                         </tr>
                     </thead>
                         {showUser}
                 </table>                    
           </div>  
-             {/* <select className="form-control offset-5 mb-5" style={{width:"120px"}}></select> */}
+             
 
       <select className="form-control offset-5 mb-5"
               style={{width:"120px"}} onChange={this.rowChange} name="per_page">
